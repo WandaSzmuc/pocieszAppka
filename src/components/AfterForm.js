@@ -7,7 +7,7 @@ const AfterForm = () => {
       <form className="form">
         <div>
           <label>Mentalnie</label>
-          <select name="select">
+          <select name="select" placeholder="mental-before">
             <option>Bardzo dobrze</option>
             <option>Dobrze</option>
             <option>Neutralnie</option>
@@ -17,7 +17,7 @@ const AfterForm = () => {
         </div>
         <div>
           <label>Fizycznie</label>
-          <select name="select">
+          <select name="select" placeholder="physical-before">
             <option>Bardzo dobrze</option>
             <option>Dobrze</option>
             <option>Neutralnie</option>
@@ -29,7 +29,7 @@ const AfterForm = () => {
           <label className="taughts">
             Co przychodzi ci do głowy po medytacji?
           </label>
-          <input></input>
+          <input placeholder="taughts-before" type="text"></input>
         </div>
 
         <a href="#" className="btn" type="submit">

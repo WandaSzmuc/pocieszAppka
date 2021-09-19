@@ -1,12 +1,13 @@
 import React from "react";
+import { Link } from "react-router-dom";
 const Menu = () => {
   return (
     <div className="menu">
       <div className="logo">pocieszAppka</div>
       <div className="menu-container">
-        <a href="#">Przed medytacją</a>
-        <a href="#">Po medytacji</a>
-        <a href="#">Twój dziennik</a>
+        <Link to="/">Przed medytacją</Link>
+        <Link to="/after">Po medytacji</Link>
+        <Link to="/diary">Twój dziennik</Link>
       </div>
     </div>
   );
