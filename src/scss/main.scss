@@ -1,4 +1,10 @@
+@import "generic/reset";
+@import "settings/all";
+body {
+  background-color: $main-color;
+}
 .container {
+  background-color: $header-bg-color;
   display: flex;
   align-items: center;
   justify-content: center;
