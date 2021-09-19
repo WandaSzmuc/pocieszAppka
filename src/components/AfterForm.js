@@ -29,7 +29,7 @@ const AfterForm = () => {
           <label className="taughts">
             Co przychodzi ci do głowy po medytacji?
           </label>
-          <input placeholder="taughts-before" type="text"></input>
+          <input type="text"></input>
         </div>
 
         <a href="#" className="btn" type="submit">
