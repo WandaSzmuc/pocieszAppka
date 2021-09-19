@@ -8,8 +8,10 @@
   padding: 40px 0;
   border-radius: 10px;
   box-shadow: 0 0 8px $panel-bg-color;
+
   h1 {
     font-size: 40px;
+    color: $secondary-text-color;
   }
 }
 
@@ -18,26 +20,34 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
   div {
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 50px;
     width: 500px;
+    color: $secondary-text-color;
     .taughts {
       padding-right: 20px;
     }
     select {
       font-family: $cite-font;
+      border: 3px solid $main-accent-color;
+      border-radius: 5px;
     }
     input {
+      margin-top: 20px;
       height: 60px;
+      width: 320px;
       border-radius: 5px;
       border: none;
+      font-family: $cite-font;
+      border: 3px solid $main-accent-color;
     }
   }
   a {
-    margin-top: 30px;
+    margin-top: 40px;
     padding: 10px 20px;
     text-decoration: none;
     color: $landing-page-main-text-color;
