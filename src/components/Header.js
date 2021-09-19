@@ -3,7 +3,7 @@ const Header = () => {
   const date = new Date();
 
   return (
-    <div className="row">
+    <div className="header-container">
       <div className="date">{date.toLocaleDateString()}</div>
       <h2 className="quote">tutaj będzie super cytat</h2>
     </div>

@@ -1,0 +1,20 @@
+.menu {
+  background-color: $panel-bg-color;
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 0 8px $panel-bg-color;
+}
+.menu-container {
+  margin: 30px;
+  a {
+    margin: 0 7px;
+    text-decoration: none;
+    color: $landing-page-main-text-color;
+  }
+}
+.logo {
+  font-weight: 700;
+  color: $secondary-text-color;
+}

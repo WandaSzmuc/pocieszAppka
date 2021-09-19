@@ -26,13 +26,15 @@ const BeforeForm = () => {
           </select>
         </div>
         <div>
-          <label>Zapisz myśli które ci dziś towarzyszą</label>
+          <label className="taughts">
+            Zapisz myśli które ci dziś towarzyszą
+          </label>
           <input></input>
         </div>
 
-        <button className="btn" type="submit">
+        <a href="#" className="btn" type="submit">
           Zapisz
-        </button>
+        </a>
       </form>
     </div>
   );

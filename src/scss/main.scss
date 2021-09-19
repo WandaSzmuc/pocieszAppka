@@ -1,28 +1,11 @@
 @import "generic/reset";
 @import "settings/all";
+
+@import "elements/menu";
+@import "elements/mainform";
+@import "elements/header";
 body {
   background-color: $main-color;
   font-family: $main-font;
   font-size: $main-font-size;
-}
-.container {
-  background-color: $header-bg-color;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin: 50px;
-}
-.row {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
 }
