@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-// import Axios from "axios";
 
 const BeforeForm = () => {
   const url = "";
@@ -8,31 +7,48 @@ const BeforeForm = () => {
     phisically: "",
     taughts: "",
   });
+  const submit = (e) => {
+    e.preventDefault();
+    const { mentally, phisically, taughts } = data;
+    const obj = {
+      mentally,
+      phisically,
+      taughts,
+    };
+  };
+  fetch("http://localhost:3000/medi", {
+    method: "POST",
+    body: JSON.stringify(obj),
+    headers: {
+      "Content-Type": "application/json",
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      console.log(data);
+      setData((prev) => [...prev, data]);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
 
-  // function submit(e) {
-  //   e.preventDefault();
-  //   Axios.post(url, {
-  //     mentally: data.mentally,
-  //     phisically: data.phisically,
-  //     taughts: data.taughts,
-  //   }).then((res) => {
-  //     console.log(res.data);
-  //   });
-  // }
-  function handle(e) {
-    const newdata = { ...data };
-    newdata[e.target.id] = e.target.value;
-    setData(newdata);
-    console.log(newdata);
-  }
+  const handleChange = (e) => {
+    const { value, id } = e.target;
+    setData((prev) => {
+      return {
+        ...prev,
+        [id]: value,
+      };
+    });
+  };
   return (
     <div className="form-before-medi container">
       <h1 className="main-header">Witaj! Jak się dziś czujesz?</h1>
-      <form className="form">
+      <form className="form" onSubmit={submit}>
         <div>
           <label>Mentalnie</label>
           <select
-            onChange={(e) => handle(e)}
+            onChange={handleChange}
             name="select"
             id="mentally"
             value={data.mentally}
@@ -47,7 +63,7 @@ const BeforeForm = () => {
         <div>
           <label>Fizycznie</label>
           <select
-            onChange={(e) => handle(e)}
+            onChange={handleChange}
             name="select"
             id="phisically"
             value={data.phisically}
@@ -64,7 +80,7 @@ const BeforeForm = () => {
             Zapisz myśli które ci dziś towarzyszą
           </label>
           <input
-            onChange={(e) => handle(e)}
+            onChange={handleChange}
             id="taughts"
             value={data.taughts}
             type="text"
