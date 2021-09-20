@@ -6,6 +6,7 @@ const BeforeForm = () => {
     phisically: "",
     taughts: "",
   });
+  const [item, setItem] = useState([]);
   const submit = (e) => {
     e.preventDefault();
     const { mentally, phisically, taughts } = data;
@@ -14,6 +15,8 @@ const BeforeForm = () => {
       phisically,
       taughts,
     };
+
+    setItem((p) => [...p, data]);
     fetch("http://localhost:3000/diary", {
       method: "POST",
       body: JSON.stringify(obj),
