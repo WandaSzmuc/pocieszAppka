@@ -1,21 +1,23 @@
 import React, { useState } from "react";
 
-const AfterForm = () => {
-  const [input, setData] = useState({
-    mentally: "",
-    physically: "",
-    taughts: "",
+function AfterForm() {
+  const [input, setAfter] = useState({
+    mentallyAfter: "",
+    physicallyAfter: "",
+    taughtsAfter: "",
   });
+
   const submit = (e) => {
     e.preventDefault();
-    const { mentally, physically, taughts } = input;
+    const { mentallyAfter, physicallyAfter, taughtsAfter } = input;
     const obj = {
-      mentally,
-      physically,
-      taughts,
+      mentallyAfter,
+      physicallyAfter,
+      taughtsAfter,
     };
-    fetch("http://localhost:3000/diary", {
-      method: "POST",
+
+    fetch(`http://localhost:3000/diary/2`, {
+      method: "PATCH",
       body: JSON.stringify(obj),
       headers: {
         "Content-Type": "application/json",
@@ -24,15 +26,16 @@ const AfterForm = () => {
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
-        setData((prev) => [...prev, data]);
+        setAfter(data);
       })
       .catch((error) => {
         console.log(error);
       });
   };
+
   const handleChange = (e) => {
     const { value, id } = e.target;
-    setData((prev) => {
+    setAfter((prev) => {
       return {
         ...prev,
         [id]: value,
@@ -46,29 +49,29 @@ const AfterForm = () => {
         <div>
           <label>Mentalnie </label>
           <input
-            name="select"
-            id="mentally"
-            value={input.mentally}
+            type="text"
+            id="mentallyAfter"
+            value={input.mentallyAfter}
             onChange={handleChange}
           ></input>
         </div>
         <div>
           <label>Fizycznie </label>
           <input
-            name="select"
-            id="physically"
-            value={input.physically}
+            type="text"
+            id="physicallyAfter"
+            value={input.physicallyAfter}
             onChange={handleChange}
           ></input>
         </div>
         <div>
-          <label className="taughts">
+          <label className="taughtsAfter">
             Co przychodzi ci do głowy po medytacji?
           </label>
           <input
             type="text"
-            id="taughts"
-            value={input.taughts}
+            id="taughtsAfter"
+            value={input.taughtsAfter}
             onChange={handleChange}
           ></input>
         </div>
@@ -77,6 +80,6 @@ const AfterForm = () => {
       </form>
     </div>
   );
-};
+}
 
 export default AfterForm;

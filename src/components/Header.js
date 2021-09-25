@@ -5,7 +5,10 @@ const Header = () => {
   return (
     <div className="header-container">
       <div className="date">{date.toLocaleDateString()}</div>
-      <h2 className="quote">tutaj będzie super cytat</h2>
+      <h2 className="quote">
+        Nigdzie nie znajdziesz spokojniejszego miejsca odosobnienia niż w swojej
+        własnej duszy ~ Marcus Aurelius
+      </h2>
     </div>
   );
 };

@@ -1,39 +1,82 @@
 import React, { useState } from "react";
 
 const BeforeForm = () => {
+  const [input, setData] = useState({
+    mentally: "",
+    physically: "",
+    taughts: "",
+  });
+
+  const submit = (e) => {
+    e.preventDefault();
+    const { mentally, physically, taughts } = input;
+    const obj = {
+      mentally,
+      physically,
+      taughts,
+    };
+
+    fetch(`http://localhost:3000/diary`, {
+      method: "POST",
+      body: JSON.stringify(obj),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+        setData(data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
+  const handleChange = (e) => {
+    const { value, id } = e.target;
+    setData((prev) => {
+      return {
+        ...prev,
+        [id]: value,
+      };
+    });
+  };
   return (
     <div className="form-before-medi container">
       <h1 className="main-header">Witaj! Jak się dziś czujesz?</h1>
-      <form className="form">
+      <form className="form" onSubmit={submit}>
         <div>
-          <label>Mentalnie</label>
-          <select>
-            <option value="Bardzo dobrze">Bardzo dobrze</option>
-            <option value="Dobrze">Dobrze</option>
-            <option value="Neutralnie">Neutralnie</option>
-            <option value="Słabo">Słabo</option>
-            <option value="Źle">Źle</option>
-          </select>
+          <label>Mentalnie </label>
+          <input
+            name="select"
+            id="mentally"
+            value={input.mentally}
+            onChange={handleChange}
+          ></input>
         </div>
         <div>
-          <label>Fizycznie</label>
-          <select>
-            <option value="Bardzo dobrze">Bardzo dobrze</option>
-            <option value="Dobrze">Dobrze</option>
-            <option value="Neutralnie">Neutralnie</option>
-            <option value="Słabo">Słabo</option>
-            <option value="Źle">Źle</option>
-          </select>
+          <label>Fizycznie </label>
+          <input
+            name="select"
+            id="physically"
+            value={input.physically}
+            onChange={handleChange}
+          ></input>
         </div>
         <div>
           <label className="taughts">
-            Zapisz myśli które ci dziś towarzyszą
+            Zapisz myśli które ci dziś towarzyszą...
           </label>
-          <input></input>
+          <input
+            type="text"
+            id="taughts"
+            value={input.taughts}
+            onChange={handleChange}
+          ></input>
         </div>
-        <a href="#" className="btn" type="submit">
-          Zapisz
-        </a>
+
+        <button type="submit">Dodaj!</button>
       </form>
     </div>
   );

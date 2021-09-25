@@ -1,1 +1,40 @@
-{ "diary": [] }
+{
+  "diary": [
+    {
+      "mentally": "dobrze",
+      "physically": "średnio",
+      "taughts": "dobrze",
+      "id": 1,
+      "mentallyAfter": "lepiej",
+      "physicallyAfter": "lepiej",
+      "taughtsAfter": "git"
+    },
+    {
+      "mentally": "dobrze",
+      "physically": "średnio",
+      "taughts": "dobrze",
+      "id": 2,
+      "mentallyAfter": "lepiej",
+      "physicallyAfter": "lepiej",
+      "taughtsAfter": "git"
+    },
+    {
+      "mentally": "dobrze",
+      "physically": "średnio",
+      "taughts": "dobrze",
+      "id": 3,
+      "mentallyAfter": "lepiej",
+      "physicallyAfter": "lepiej",
+      "taughtsAfter": "git"
+    },
+    {
+      "mentally": "dobrze",
+      "physically": "średnio",
+      "taughts": "dobrze",
+      "id": 4,
+      "mentallyAfter": "lepiej",
+      "physicallyAfter": "lepiej",
+      "taughtsAfter": "git"
+    }
+  ]
+}
