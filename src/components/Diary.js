@@ -1,11 +1,11 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 function Diary() {
-  const [observations, setObservation] = useState([]);
+  const [observations, setObservations] = useState([]);
 
   useEffect(() => {
     fetch("http://localhost:3000/diary")
       .then((response) => response.json())
-      .then((data) => setObservation(data))
+      .then((data) => setObservations(data))
       .catch((error) => {
         console.log(error);
       });
@@ -17,20 +17,28 @@ function Diary() {
       <table>
         <thead>
           <tr>
-            <th>ID</th> <th>Przed medytacją</th> <th>Po medytacji</th>
+            <th>
+              medytacja
+              <br />
+              dnia
+            </th>
+            <th>opis</th> <th>Przed medytacją</th> <th>Po medytacji</th>
           </tr>
         </thead>
         {observations.map((item, id) => (
           <tbody key={id}>
             <tr>
+              <th>{item.id}</th>
               <th>Mentalnie</th> <td>{item.mentally}</td>{" "}
               <td>{item.mentallyAfter}</td>
             </tr>
             <tr>
+              <th></th>
               <th>Fizycznie</th> <td>{item.physically}</td>{" "}
               <td>{item.physicallyAfter}</td>
             </tr>
             <tr>
+              <th></th>
               <th>Przemyślenia</th> <td>{item.taughts}</td>{" "}
               <td>{item.taughtsAfter}</td>
             </tr>
