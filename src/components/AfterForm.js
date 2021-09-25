@@ -16,7 +16,7 @@ function AfterForm() {
       taughtsAfter,
     };
 
-    fetch(`http://localhost:3000/diary/2`, {
+    fetch(`http://localhost:3000/diary/6`, {
       method: "PATCH",
       body: JSON.stringify(obj),
       headers: {
@@ -76,7 +76,9 @@ function AfterForm() {
           ></input>
         </div>
 
-        <button type="submit">Dodaj!</button>
+        <button className="main-button-style" type="submit">
+          Zapisz!
+        </button>
       </form>
     </div>
   );

@@ -76,7 +76,9 @@ const BeforeForm = () => {
           ></input>
         </div>
 
-        <button type="submit">Dodaj!</button>
+        <button className="main-button-style" type="submit">
+          Zapisz!
+        </button>
       </form>
     </div>
   );

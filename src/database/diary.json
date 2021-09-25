@@ -3,26 +3,8 @@
     {
       "mentally": "dobrze",
       "physically": "średnio",
-      "taughts": "dzisiaj miałam ciężki dzień",
-      "id": 1,
-      "mentallyAfter": "lepiej",
-      "physicallyAfter": "lepiej",
-      "taughtsAfter": "dzięki medytacji odpoczęłam"
-    },
-    {
-      "mentally": "dobrze",
-      "physically": "średnio",
-      "taughts": "koleżanka z pracy mnie wkurza",
-      "id": 2,
-      "mentallyAfter": "lepiej",
-      "physicallyAfter": "lepiej",
-      "taughtsAfter": "nie ma to już dla mnie znaczenia"
-    },
-    {
-      "mentally": "dobrze",
-      "physically": "średnio",
       "taughts": "pogoda mnie dołuje",
-      "id": 3,
+      "id": 2,
       "mentallyAfter": "lepiej",
       "physicallyAfter": "lepiej",
       "taughtsAfter": "odpocznę sobie"
@@ -30,11 +12,11 @@
     {
       "mentally": "dobrze",
       "physically": "średnio",
-      "taughts": "dobrze",
+      "taughts": "pogoda mnie dołuje",
       "id": 4,
-      "mentallyAfter": "lepiej",
-      "physicallyAfter": "lepiej",
-      "taughtsAfter": "git"
+      "mentallyAfter": "spoko",
+      "physicallyAfter": "loko",
+      "taughtsAfter": "luz"
     }
   ]
 }
