@@ -28,19 +28,22 @@ function Diary() {
         {observations.map((item, id) => (
           <tbody key={id}>
             <tr>
-              <th>{item.id}</th>
-              <th>Mentalnie</th> <td>{item.mentally}</td>{" "}
-              <td>{item.mentallyAfter}</td>
+              <th className="table-el">{item.id}</th>
+              <th className="table-description table-el">Mentalnie</th>{" "}
+              <td className="table-el before">{item.mentally}</td>{" "}
+              <td className="table-el">{item.mentallyAfter}</td>
             </tr>
             <tr>
               <th></th>
-              <th>Fizycznie</th> <td>{item.physically}</td>{" "}
-              <td>{item.physicallyAfter}</td>
+              <th className="table-description table-el">Fizycznie</th>{" "}
+              <td className="table-el before">{item.physically}</td>{" "}
+              <td className="table-el">{item.physicallyAfter}</td>
             </tr>
             <tr>
               <th></th>
-              <th>Przemyślenia</th> <td>{item.taughts}</td>{" "}
-              <td>{item.taughtsAfter}</td>
+              <th className="table-description table-el">Przemyślenia</th>{" "}
+              <td className="table-el before">{item.taughts}</td>{" "}
+              <td className="table-el">{item.taughtsAfter}</td>
             </tr>
           </tbody>
         ))}

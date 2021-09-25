@@ -65,7 +65,7 @@ function AfterForm() {
           ></input>
         </div>
         <div>
-          <label className="taughtsAfter">
+          <label className="taughts">
             Co przychodzi ci do głowy po medytacji?
           </label>
           <input

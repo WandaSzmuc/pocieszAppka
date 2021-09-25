@@ -25,11 +25,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 50px;
-    width: 500px;
+    height: 70px;
+    width: 550px;
     color: $secondary-text-color;
     .taughts {
-      padding-right: 20px;
+      width: 200px;
     }
     select {
       font-family: $cite-font;
@@ -38,15 +38,15 @@
     }
     input {
       margin-top: 20px;
-      height: 60px;
-      width: 320px;
+      height: 50px;
+      width: 300px;
       border-radius: 5px;
       border: none;
       font-family: $cite-font;
       border: 3px solid $main-accent-color;
     }
   }
-  a {
+  button {
     margin-top: 40px;
     padding: 10px 20px;
     text-decoration: none;

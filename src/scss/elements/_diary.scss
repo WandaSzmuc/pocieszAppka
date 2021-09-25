@@ -1,15 +1,23 @@
 table {
   margin-top: 30px;
-  border: 2px solid $secondary-text-color;
+  // border: 2px solid $secondary-text-color;
   width: 90%;
 
+  tbody {
+    border: 2px solid $secondary-text-color;
+  }
   tr {
     height: 40px;
     font-size: 20px;
-    border: 2px solid $secondary-text-color;
     text-align: center;
+    .before {
+      background-color: $panel-bg-color;
+    }
     th {
       color: $main-accent-color;
+    }
+    .table-el {
+      padding-top: 10px;
     }
   }
   thead {
