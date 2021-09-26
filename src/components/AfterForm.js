@@ -16,7 +16,7 @@ function AfterForm() {
       taughtsAfter,
     };
 
-    fetch(`http://localhost:3000/diary/6`, {
+    fetch(`http://localhost:3000/diary/2`, {
       method: "PATCH",
       body: JSON.stringify(obj),
       headers: {

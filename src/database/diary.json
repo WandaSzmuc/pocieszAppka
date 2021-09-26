@@ -1,22 +1,11 @@
 {
   "diary": [
     {
+      "date": "26.09.2021",
       "mentally": "dobrze",
       "physically": "średnio",
-      "taughts": "pogoda mnie dołuje",
-      "id": 2,
-      "mentallyAfter": "lepiej",
-      "physicallyAfter": "lepiej",
-      "taughtsAfter": "odpocznę sobie"
-    },
-    {
-      "mentally": "dobrze",
-      "physically": "średnio",
-      "taughts": "pogoda mnie dołuje",
-      "id": 4,
-      "mentallyAfter": "spoko",
-      "physicallyAfter": "loko",
-      "taughtsAfter": "luz"
+      "taughts": "coś tam coś tam",
+      "id": 5
     }
   ]
 }

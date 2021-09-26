@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 
 const BeforeForm = () => {
+  const date = new Date();
   const [input, setData] = useState({
+    date: `${date.toLocaleDateString()}`,
     mentally: "",
     physically: "",
     taughts: "",
@@ -9,8 +11,9 @@ const BeforeForm = () => {
 
   const submit = (e) => {
     e.preventDefault();
-    const { mentally, physically, taughts } = input;
+    const { date, mentally, physically, taughts } = input;
     const obj = {
+      date,
       mentally,
       physically,
       taughts,

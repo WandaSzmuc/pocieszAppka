@@ -43,7 +43,7 @@ function Diary() {
         {observations.map((item, id) => (
           <tbody key={id}>
             <tr>
-              <th className="table-el">{item.id}</th>
+              <th className="table-el">{item.date}</th>
               <th className="table-description table-el">Mentalnie</th>{" "}
               <td className="table-el before">{item.mentally}</td>{" "}
               <td className="table-el">{item.mentallyAfter}</td>
