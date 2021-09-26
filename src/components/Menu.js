@@ -6,7 +6,6 @@ const Menu = () => {
       <div className="logo">pocieszAppka</div>
       <div className="menu-container">
         <Link to="/">Przed medytacją</Link>
-        <Link to="/after">Po medytacji</Link>
         <Link to="/diary">Twój dziennik</Link>
       </div>
     </div>

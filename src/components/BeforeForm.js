@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const BeforeForm = ({ setId }) => {
+const BeforeForm = ({ history }) => {
   const date = new Date();
   const [input, setData] = useState({
     date: `${date.toLocaleDateString()}`,
@@ -30,7 +30,7 @@ const BeforeForm = ({ setId }) => {
       .then((data) => {
         console.log(data);
         setData(data);
-        setId(data.id);
+        history.push(`after/${data.id}`);
       })
       .catch((error) => {
         console.log(error);

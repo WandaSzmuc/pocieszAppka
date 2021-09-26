@@ -1,11 +1,13 @@
 import React, { useState } from "react";
+import { useParams } from "react-router";
 
-function AfterForm({ id }) {
+function AfterForm() {
   const [input, setAfter] = useState({
     mentallyAfter: "",
     physicallyAfter: "",
     taughtsAfter: "",
   });
+  const { id } = useParams();
 
   const submit = (e) => {
     e.preventDefault();

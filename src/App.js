@@ -5,19 +5,16 @@ import Header from "./components/Header";
 import Menu from "./components/Menu";
 import Diary from "./components/Diary";
 import AfterForm from "./components/AfterForm";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 function App() {
-  const [id, setId] = useState(null);
   return (
     <Router>
       <Menu />
       <Header />
       <Switch>
-        <Route exact path="/">
-          <BeforeForm setId={setId} />
-        </Route>
-        <Route path="/after">
-          <AfterForm id={id} />
+        <Route exact path="/" component={BeforeForm} />
+        <Route path="/after/:id">
+          <AfterForm />
         </Route>
         <Route path="/diary">
           <Diary />

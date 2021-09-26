@@ -9,6 +9,26 @@
       "mentallyAfter": "dużo lepiej",
       "physicallyAfter": "relaks",
       "taughtsAfter": "dużo pozytywnych myśli"
+    },
+    {
+      "date": "26.09.2021",
+      "mentally": "dobrze",
+      "physically": "dobrze",
+      "taughts": "wszystko git ",
+      "id": 8,
+      "mentallyAfter": "spoko",
+      "physicallyAfter": "loko",
+      "taughtsAfter": "git"
+    },
+    {
+      "date": "26.09.2021",
+      "mentally": "lepiej",
+      "physically": "lepiej",
+      "taughts": "wszystko git ",
+      "id": 9,
+      "mentallyAfter": "fajnie",
+      "physicallyAfter": "relaks",
+      "taughtsAfter": "luz"
     }
   ]
 }
