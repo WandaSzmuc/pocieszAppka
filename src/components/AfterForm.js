@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function AfterForm() {
+function AfterForm({ id }) {
   const [input, setAfter] = useState({
     mentallyAfter: "",
     physicallyAfter: "",
@@ -16,7 +16,7 @@ function AfterForm() {
       taughtsAfter,
     };
 
-    fetch(`http://localhost:3000/diary/2`, {
+    fetch(`http://localhost:3000/diary/${id}`, {
       method: "PATCH",
       body: JSON.stringify(obj),
       headers: {

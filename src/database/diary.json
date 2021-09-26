@@ -3,9 +3,12 @@
     {
       "date": "26.09.2021",
       "mentally": "dobrze",
-      "physically": "średnio",
-      "taughts": "coś tam coś tam",
-      "id": 5
+      "physically": "spięta",
+      "taughts": "wszystko mnie denerwuje",
+      "id": 7,
+      "mentallyAfter": "dużo lepiej",
+      "physicallyAfter": "relaks",
+      "taughtsAfter": "dużo pozytywnych myśli"
     }
   ]
 }

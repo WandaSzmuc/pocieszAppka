@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const BeforeForm = () => {
+const BeforeForm = ({ setId }) => {
   const date = new Date();
   const [input, setData] = useState({
     date: `${date.toLocaleDateString()}`,
@@ -30,6 +30,7 @@ const BeforeForm = () => {
       .then((data) => {
         console.log(data);
         setData(data);
+        setId(data.id);
       })
       .catch((error) => {
         console.log(error);
