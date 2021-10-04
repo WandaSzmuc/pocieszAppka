@@ -32,4 +32,7 @@ table {
     border-radius: 30px;
     font-family: $main-font;
   }
+  .main-button-style:hover {
+    color: $hover-effect-color;
+  }
 }

@@ -10,6 +10,10 @@
   box-shadow: 0 0 8px $panel-bg-color;
 
   h1 {
+    @media (max-width: 750px) {
+      font-size: 30px;
+      margin-bottom: 20px;
+    }
     font-size: 40px;
     color: $secondary-text-color;
   }
@@ -22,6 +26,12 @@
   justify-content: center;
 
   div {
+    @media (max-width: 750px) {
+      display: flex;
+      flex-direction: column;
+      height: 120px;
+      margin: 15px;
+    }
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -29,6 +39,10 @@
     width: 550px;
     color: $secondary-text-color;
     .taughts {
+      @media (max-width: 750px) {
+        text-align: center;
+        width: 500px;
+      }
       width: 200px;
     }
     select {
@@ -37,6 +51,9 @@
       border-radius: 5px;
     }
     input {
+      @media (max-width: 750px) {
+        height: 70px;
+      }
       margin-top: 20px;
       height: 50px;
       width: 300px;
@@ -47,6 +64,7 @@
       background-color: $panel-bg-color;
     }
   }
+
   .main-button-style {
     margin-top: 40px;
     padding: 10px 20px;
@@ -56,5 +74,8 @@
     border: 1px solid $main-accent-color;
     border-radius: 30px;
     font-family: $main-font;
+  }
+  .main-button-style:hover {
+    color: $hover-effect-color;
   }
 }

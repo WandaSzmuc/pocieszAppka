@@ -50,7 +50,7 @@ const BeforeForm = ({ history }) => {
     <div className="form-before-medi container">
       <h1 className="main-header">Witaj! Jak się dziś czujesz?</h1>
       <form className="form" onSubmit={submit}>
-        <div>
+        <div className="">
           <label>Mentalnie </label>
           <input
             name="select"
