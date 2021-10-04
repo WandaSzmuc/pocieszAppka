@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useParams } from "react-router";
 
-function AfterForm() {
+function AfterForm({ history }) {
   const [input, setAfter] = useState({
     mentallyAfter: "",
     physicallyAfter: "",
@@ -29,6 +29,8 @@ function AfterForm() {
       .then((data) => {
         console.log(data);
         setAfter(data);
+        console.log(history);
+        history.push("/diary");
       })
       .catch((error) => {
         console.log(error);
@@ -45,7 +47,7 @@ function AfterForm() {
     });
   };
   return (
-    <div className="form-before-medi container">
+    <div className="container form-after-medi">
       <h1 className="main-header">Jak czujesz się po praktyce?</h1>
       <form className="form" onSubmit={submit}>
         <div>

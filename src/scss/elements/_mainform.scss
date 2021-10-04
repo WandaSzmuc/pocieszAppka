@@ -1,5 +1,5 @@
 .container {
-  background-color: $header-bg-color;
+  background-color: $panel-bg-color;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -42,8 +42,9 @@
       width: 300px;
       border-radius: 5px;
       border: none;
-      font-family: $cite-font;
-      border: 3px solid $main-accent-color;
+      font-family: $main-font;
+      border: 1px solid $main-accent-color;
+      background-color: $panel-bg-color;
     }
   }
   .main-button-style {
@@ -53,6 +54,7 @@
     color: $landing-page-main-text-color;
     background-color: $main-accent-color;
     border: 1px solid $main-accent-color;
-    border-radius: 5px;
+    border-radius: 30px;
+    font-family: $main-font;
   }
 }

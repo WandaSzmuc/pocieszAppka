@@ -3,32 +3,42 @@
     {
       "date": "26.09.2021",
       "mentally": "dobrze",
-      "physically": "spięta",
-      "taughts": "wszystko mnie denerwuje",
-      "id": 7,
-      "mentallyAfter": "dużo lepiej",
-      "physicallyAfter": "relaks",
-      "taughtsAfter": "dużo pozytywnych myśli"
-    },
-    {
-      "date": "26.09.2021",
-      "mentally": "dobrze",
-      "physically": "dobrze",
+      "physically": "lepiej",
       "taughts": "wszystko git ",
-      "id": 8,
+      "id": 1,
       "mentallyAfter": "spoko",
       "physicallyAfter": "loko",
       "taughtsAfter": "git"
     },
     {
-      "date": "26.09.2021",
+      "date": "27.09.2021",
       "mentally": "lepiej",
       "physically": "lepiej",
       "taughts": "wszystko git ",
-      "id": 9,
+      "id": 2,
       "mentallyAfter": "fajnie",
       "physicallyAfter": "relaks",
-      "taughtsAfter": "luz"
+      "taughtsAfter": "coooo humor gituwa"
+    },
+    {
+      "date": "2.10.2021",
+      "mentally": "dobrze",
+      "physically": "dobrze",
+      "taughts": "wszystko git ",
+      "id": 15,
+      "mentallyAfter": "spoko",
+      "physicallyAfter": "loko",
+      "taughtsAfter": "coooo humor gituwa"
+    },
+    {
+      "date": "4.10.2021",
+      "mentally": "średnio",
+      "physically": "dobrze",
+      "taughts": "coś tam coś tam",
+      "id": 17,
+      "mentallyAfter": "spoko",
+      "physicallyAfter": "relaks",
+      "taughtsAfter": "dam sobie radę"
     }
   ]
 }

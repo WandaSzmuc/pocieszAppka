@@ -13,9 +13,7 @@ function App() {
       <Header />
       <Switch>
         <Route exact path="/" component={BeforeForm} />
-        <Route path="/after/:id">
-          <AfterForm />
-        </Route>
+        <Route path="/after/:id" component={AfterForm} />
         <Route path="/diary">
           <Diary />
         </Route>

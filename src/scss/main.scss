@@ -5,9 +5,13 @@
 @import "elements/mainform";
 @import "elements/header";
 @import "elements/diary";
+@import "elements/after";
+@import "elements/before";
 
 body {
-  background-color: $main-color;
+  background-image: url(images/pexels-stanislav-kondratiev-2908983.jpg);
+  background-position: center;
+  background-size: cover;
   font-family: $main-font;
   font-size: $main-font-size;
 }
