@@ -46,6 +46,7 @@ function Diary() {
     console.warn("function called", observations[id - 1]);
     let item = observations[id - 1];
     setEditObservation({
+      id: item.id,
       mentally: item.mentally,
       mentallyAfter: item.mentallyAfter,
       physically: item.physically,
@@ -66,7 +67,6 @@ function Diary() {
       taughtsAfter,
     } = editObservation;
     const item = {
-      id,
       mentally,
       mentallyAfter,
       physically,
@@ -77,7 +77,7 @@ function Diary() {
 
     console.warn("item: ", item);
     fetch(`http://localhost:3000/diary/${id}`, {
-      method: "PUT",
+      method: "PATCH",
       headers: {
         "Content-Type": "application/json",
       },
