@@ -30,8 +30,8 @@
     color: $landing-page-main-text-color;
   }
   a:hover {
-    font-weight: bold;
-    // color: $hover-effect-color;
+    transition: 1s;
+    color: $landing-page-secondary-bg-color;
   }
 }
 .logo {

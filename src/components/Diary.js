@@ -1,6 +1,15 @@
 import React, { useEffect, useState } from "react";
 function Diary() {
   const [observations, setObservations] = useState([]);
+  const [editObservation, setEditObservation] = useState({
+    mentally: "",
+    mentallyAfter: "",
+    physically: "",
+    physicallyAfter: "",
+    taughts: "",
+    taughtsAfter: "",
+    id: "",
+  });
 
   useEffect(() => {
     getObservations();
@@ -18,6 +27,45 @@ function Diary() {
   function deleteObservation(id) {
     fetch(`http://localhost:3000/diary/${id}`, {
       method: "DELETE",
+    }).then((response) => {
+      response.json().then((resp) => {
+        console.warn(resp);
+        getObservations();
+      });
+    });
+  }
+  function selectObservation(id) {
+    console.warn("function called", observations[id - 1]);
+    let item = observations[id - 1];
+    setEditObservation({
+      mentally: item.mentally,
+      mentallyAfter: item.mentallyAfter,
+      physically: item.physically,
+      physicallyAfter: item.physicallyAfter,
+      taughts: item.taughts,
+      taughtsAfter: item.taughtsAfter,
+    });
+  }
+  function updateObservation() {
+    let item = {
+      editObservation: {
+        mentally: editObservation.mentally,
+        mentallyAfter: editObservation.mentallyAfter,
+        physically: editObservation.physically,
+        physicallyAfter: editObservation.physicallyAfter,
+        taughts: editObservation.taughts,
+        taughtsAfter: editObservation.taughtsAfter,
+      },
+    };
+
+    console.warn("item: ", item);
+    fetch(`http://localhost:3000/diary/${editObservation.id}`, {
+      method: "PUT",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(item),
     }).then((response) => {
       response.json().then((resp) => {
         console.warn(resp);
@@ -65,11 +113,71 @@ function Diary() {
               <th className="table-description table-el">Przemyślenia</th>{" "}
               <td className="table-el before">{item.taughts}</td>{" "}
               <td className="table-el">{item.taughtsAfter}</td>
-              <button className="main-button-style">Edytuj</button>
+              <button
+                onClick={() => selectObservation(item.id)}
+                className="main-button-style"
+              >
+                Edytuj
+              </button>
             </tr>
           </tbody>
         ))}
       </table>
+      <div>
+        <div>
+          <input
+            id="mentally"
+            value={editObservation.mentally}
+            onChange={(e) => {
+              setEditObservation(e.target.value);
+            }}
+          ></input>
+          <br />
+          <input
+            id="physically"
+            value={editObservation.physically}
+            onChange={(e) => {
+              setEditObservation(e.target.value);
+            }}
+          ></input>
+          <br />
+          <input
+            id="taughts"
+            value={editObservation.taughts}
+            onChange={(e) => {
+              setEditObservation(e.target.value);
+            }}
+          ></input>
+          <br />
+        </div>
+        <div>
+          <input
+            id="mentallyAfter"
+            value={editObservation.mentallyAfter}
+            onChange={(e) => {
+              setEditObservation(e.target.value);
+            }}
+          ></input>
+          <br />
+          <input
+            id="physicallyAfter"
+            value={editObservation.physicallyAfter}
+            onChange={(e) => {
+              setEditObservation(e.target.value);
+            }}
+          ></input>
+          <br />
+          <input
+            id="taughtsAfter"
+            value={editObservation.taughtsAfter}
+            onChange={(e) => {
+              setEditObservation(e.target.value);
+            }}
+          ></input>
+          <br />
+        </div>
+        <button onClick={updateObservation}>Zmień</button>
+      </div>
     </div>
   );
 }

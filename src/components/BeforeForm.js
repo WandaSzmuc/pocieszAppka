@@ -47,43 +47,45 @@ const BeforeForm = ({ history }) => {
     });
   };
   return (
-    <div className="form-before-medi container">
-      <h1 className="main-header">Witaj! Jak się dziś czujesz?</h1>
-      <form className="form" onSubmit={submit}>
-        <div className="">
-          <label>Mentalnie </label>
-          <input
-            name="select"
-            id="mentally"
-            value={input.mentally}
-            onChange={handleChange}
-          ></input>
-        </div>
-        <div>
-          <label>Fizycznie </label>
-          <input
-            name="select"
-            id="physically"
-            value={input.physically}
-            onChange={handleChange}
-          ></input>
-        </div>
-        <div>
-          <label className="taughts">
-            Zapisz myśli które ci dziś towarzyszą...
-          </label>
-          <input
-            type="text"
-            id="taughts"
-            value={input.taughts}
-            onChange={handleChange}
-          ></input>
-        </div>
+    <div className="parent-container">
+      <div className="form-before-medi container">
+        <h1 className="main-header">Witaj! Jak się dziś czujesz?</h1>
+        <form className="form" onSubmit={submit}>
+          <div className="">
+            <label>Mentalnie </label>
+            <input
+              name="select"
+              id="mentally"
+              value={input.mentally}
+              onChange={handleChange}
+            ></input>
+          </div>
+          <div>
+            <label>Fizycznie </label>
+            <input
+              name="select"
+              id="physically"
+              value={input.physically}
+              onChange={handleChange}
+            ></input>
+          </div>
+          <div>
+            <label className="taughts">
+              Zapisz myśli które ci dziś towarzyszą...
+            </label>
+            <input
+              type="text"
+              id="taughts"
+              value={input.taughts}
+              onChange={handleChange}
+            ></input>
+          </div>
 
-        <button className="main-button-style" type="submit">
-          Zapisz!
-        </button>
-      </form>
+          <button className="main-button-style" type="submit">
+            Przejdź do medytacji!
+          </button>
+        </form>
+      </div>
     </div>
   );
 };

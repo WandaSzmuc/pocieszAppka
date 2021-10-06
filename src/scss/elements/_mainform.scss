@@ -1,3 +1,10 @@
+.parent-container {
+  display: flex;
+  // flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
 .container {
   background-color: $panel-bg-color;
   display: flex;
@@ -8,6 +15,7 @@
   padding: 40px 0;
   border-radius: 10px;
   box-shadow: 0 0 8px $panel-bg-color;
+  min-width: 750px;
 
   h1 {
     @media (max-width: 750px) {

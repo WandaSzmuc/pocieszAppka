@@ -48,7 +48,7 @@ function AfterForm({ history }) {
   };
   return (
     <div className="container form-after-medi">
-      <h1 className="main-header">Jak czujesz się po praktyce?</h1>
+      <h1 className="main-header">Jak czujesz się po medytacji?</h1>
       <form className="form" onSubmit={submit}>
         <div>
           <label>Mentalnie </label>

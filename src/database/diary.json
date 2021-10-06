@@ -22,12 +22,12 @@
     },
     {
       "date": "2.10.2021",
-      "mentally": "dobrze",
-      "physically": "dobrze",
+      "mentally": "lepiej",
+      "physically": "lepiej",
       "taughts": "wszystko git ",
-      "id": 15,
-      "mentallyAfter": "spoko",
-      "physicallyAfter": "loko",
+      "id": 3,
+      "mentallyAfter": "fajnie",
+      "physicallyAfter": "relaks",
       "taughtsAfter": "coooo humor gituwa"
     },
     {
@@ -35,7 +35,17 @@
       "mentally": "średnio",
       "physically": "dobrze",
       "taughts": "coś tam coś tam",
-      "id": 17,
+      "id": 4,
+      "mentallyAfter": "spoko",
+      "physicallyAfter": "relaks",
+      "taughtsAfter": "dam sobie radę"
+    },
+    {
+      "date": "6.10.2021",
+      "mentally": "słabo",
+      "physically": "spięta",
+      "taughts": "coś tam coś tam",
+      "id": 5,
       "mentallyAfter": "spoko",
       "physicallyAfter": "relaks",
       "taughtsAfter": "dam sobie radę"
