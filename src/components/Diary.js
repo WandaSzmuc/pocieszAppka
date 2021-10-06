@@ -58,7 +58,6 @@ function Diary() {
     let item = {
       editObservation,
     };
-
     console.warn("item: ", item);
     fetch(`http://localhost:3000/diary/${editObservation.id}`, {
       method: "PUT",
@@ -70,6 +69,7 @@ function Diary() {
     }).then((response) => {
       response.json().then((resp) => {
         console.warn(resp);
+        getObservations();
       });
     });
   }
@@ -123,48 +123,54 @@ function Diary() {
           </tbody>
         ))}
       </table>
-      <div>
-        <div>
-          <input
-            id="mentally"
-            value={editObservation.mentally}
-            onChange={handleChange}
-          ></input>
-          <br />
-          <input
-            id="physically"
-            value={editObservation.physically}
-            onChange={handleChange}
-          ></input>
-          <br />
-          <input
-            id="taughts"
-            value={editObservation.taughts}
-            onChange={handleChange}
-          ></input>
-          <br />
+      <div className="edit-form">
+        <div className="edit-form-columns">
+          <div className="edit-form-column">
+            <h2 className="edit-form-el">Przed</h2>
+            <input
+              className="edit-form-el"
+              id="mentally"
+              value={editObservation.mentally}
+              onChange={handleChange}
+            ></input>
+            <input
+              className="edit-form-el"
+              id="physically"
+              value={editObservation.physically}
+              onChange={handleChange}
+            ></input>
+            <input
+              className="edit-form-el"
+              id="taughts"
+              value={editObservation.taughts}
+              onChange={handleChange}
+            ></input>
+          </div>
+          <div className="edit-form-column">
+            <h2 className="edit-form-el">Po</h2>
+            <input
+              className="edit-form-el"
+              id="mentallyAfter"
+              value={editObservation.mentallyAfter}
+              onChange={handleChange}
+            ></input>
+            <input
+              className="edit-form-el"
+              id="physicallyAfter"
+              value={editObservation.physicallyAfter}
+              onChange={handleChange}
+            ></input>
+            <input
+              className="edit-form-el"
+              id="taughtsAfter"
+              value={editObservation.taughtsAfter}
+              onChange={handleChange}
+            ></input>
+          </div>
         </div>
-        <div>
-          <input
-            id="mentallyAfter"
-            value={editObservation.mentallyAfter}
-            onChange={handleChange}
-          ></input>
-          <br />
-          <input
-            id="physicallyAfter"
-            value={editObservation.physicallyAfter}
-            onChange={handleChange}
-          ></input>
-          <br />
-          <input
-            id="taughtsAfter"
-            value={editObservation.taughtsAfter}
-            onChange={handleChange}
-          ></input>
-          <br />
-        </div>
-        <button onClick={updateObservation}>Zmień</button>
+        <button className="main-button-style" onClick={updateObservation}>
+          Zmień
+        </button>
       </div>
     </div>
   );

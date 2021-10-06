@@ -36,3 +36,42 @@ table {
     color: $hover-effect-color;
   }
 }
+.edit-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 10px;
+  background-color: $header-bg-color;
+  margin: 20px;
+  padding: 20px;
+  .edit-form-columns {
+    display: flex;
+    .edit-form-column {
+      display: flex;
+      flex-direction: column;
+      margin: 5px;
+      .edit-form-el {
+        margin: 5px;
+      }
+      input {
+        font-family: $main-font;
+        font-size: 17px;
+        border: none;
+        border-radius: 5px;
+      }
+    }
+  }
+  button {
+    margin-top: 10px;
+    padding: 7px 12px;
+    text-decoration: none;
+    color: $landing-page-main-text-color;
+    background-color: $main-accent-color;
+    border: 1px solid $main-accent-color;
+    border-radius: 30px;
+    font-family: $main-font;
+    font-size: 15px;
+  }
+}
