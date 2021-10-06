@@ -54,25 +54,38 @@ function Diary() {
       taughtsAfter: item.taughtsAfter,
     });
   }
-  function updateObservation(id) {
-    let item = {
-      editObservation,
+  function updateObservation(e) {
+    e.preventDefault();
+    const {
+      id,
+      mentally,
+      mentallyAfter,
+      physically,
+      physicallyAfter,
+      taughts,
+      taughtsAfter,
+    } = editObservation;
+    const item = {
+      id,
+      mentally,
+      mentallyAfter,
+      physically,
+      physicallyAfter,
+      taughts,
+      taughtsAfter,
     };
+
     console.warn("item: ", item);
-    fetch(`http://localhost:3000/diary/${editObservation.id}`, {
+    fetch(`http://localhost:3000/diary/${id}`, {
       method: "PUT",
       headers: {
-        Accept: "application/json",
         "Content-Type": "application/json",
       },
       body: JSON.stringify(item),
     }).then((response) => {
       response.json().then((data) => {
         console.warn(data);
-        const updatedObject = [...observations];
-        const idx = observations.findIndex((obj) => obj.id === id);
-        updatedObject[idx] = data;
-        getObservations(updatedObject);
+        getObservations(data);
       });
     });
   }
