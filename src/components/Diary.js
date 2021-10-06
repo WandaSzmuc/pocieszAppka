@@ -10,7 +10,15 @@ function Diary() {
     taughtsAfter: "",
     id: "",
   });
-
+  const handleChange = (e) => {
+    const { value, id } = e.target;
+    setEditObservation((prev) => {
+      return {
+        ...prev,
+        [id]: value,
+      };
+    });
+  };
   useEffect(() => {
     getObservations();
   }, []);
@@ -48,14 +56,7 @@ function Diary() {
   }
   function updateObservation() {
     let item = {
-      editObservation: {
-        mentally: editObservation.mentally,
-        mentallyAfter: editObservation.mentallyAfter,
-        physically: editObservation.physically,
-        physicallyAfter: editObservation.physicallyAfter,
-        taughts: editObservation.taughts,
-        taughtsAfter: editObservation.taughtsAfter,
-      },
+      editObservation,
     };
 
     console.warn("item: ", item);
@@ -69,7 +70,6 @@ function Diary() {
     }).then((response) => {
       response.json().then((resp) => {
         console.warn(resp);
-        getObservations();
       });
     });
   }
@@ -128,25 +128,19 @@ function Diary() {
           <input
             id="mentally"
             value={editObservation.mentally}
-            onChange={(e) => {
-              setEditObservation(e.target.value);
-            }}
+            onChange={handleChange}
           ></input>
           <br />
           <input
             id="physically"
             value={editObservation.physically}
-            onChange={(e) => {
-              setEditObservation(e.target.value);
-            }}
+            onChange={handleChange}
           ></input>
           <br />
           <input
             id="taughts"
             value={editObservation.taughts}
-            onChange={(e) => {
-              setEditObservation(e.target.value);
-            }}
+            onChange={handleChange}
           ></input>
           <br />
         </div>
@@ -154,25 +148,19 @@ function Diary() {
           <input
             id="mentallyAfter"
             value={editObservation.mentallyAfter}
-            onChange={(e) => {
-              setEditObservation(e.target.value);
-            }}
+            onChange={handleChange}
           ></input>
           <br />
           <input
             id="physicallyAfter"
             value={editObservation.physicallyAfter}
-            onChange={(e) => {
-              setEditObservation(e.target.value);
-            }}
+            onChange={handleChange}
           ></input>
           <br />
           <input
             id="taughtsAfter"
             value={editObservation.taughtsAfter}
-            onChange={(e) => {
-              setEditObservation(e.target.value);
-            }}
+            onChange={handleChange}
           ></input>
           <br />
         </div>
