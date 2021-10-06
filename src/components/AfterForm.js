@@ -47,43 +47,45 @@ function AfterForm({ history }) {
     });
   };
   return (
-    <div className="container form-after-medi">
-      <h1 className="main-header">Jak czujesz się po medytacji?</h1>
-      <form className="form" onSubmit={submit}>
-        <div>
-          <label>Mentalnie </label>
-          <input
-            type="text"
-            id="mentallyAfter"
-            value={input.mentallyAfter}
-            onChange={handleChange}
-          ></input>
-        </div>
-        <div>
-          <label>Fizycznie </label>
-          <input
-            type="text"
-            id="physicallyAfter"
-            value={input.physicallyAfter}
-            onChange={handleChange}
-          ></input>
-        </div>
-        <div>
-          <label className="taughts">
-            Co przychodzi ci do głowy po medytacji?
-          </label>
-          <input
-            type="text"
-            id="taughtsAfter"
-            value={input.taughtsAfter}
-            onChange={handleChange}
-          ></input>
-        </div>
+    <div className="parent-container">
+      <div className="container form-after-medi">
+        <h1 className="main-header">Jak czujesz się po medytacji?</h1>
+        <form className="form" onSubmit={submit}>
+          <div>
+            <label>Mentalnie </label>
+            <input
+              type="text"
+              id="mentallyAfter"
+              value={input.mentallyAfter}
+              onChange={handleChange}
+            ></input>
+          </div>
+          <div>
+            <label>Fizycznie </label>
+            <input
+              type="text"
+              id="physicallyAfter"
+              value={input.physicallyAfter}
+              onChange={handleChange}
+            ></input>
+          </div>
+          <div>
+            <label className="taughts">
+              Co przychodzi ci do głowy po medytacji?
+            </label>
+            <input
+              type="text"
+              id="taughtsAfter"
+              value={input.taughtsAfter}
+              onChange={handleChange}
+            ></input>
+          </div>
 
-        <button className="main-button-style" type="submit">
-          Zapisz!
-        </button>
-      </form>
+          <button className="main-button-style" type="submit">
+            Zapisz!
+          </button>
+        </form>
+      </div>
     </div>
   );
 }

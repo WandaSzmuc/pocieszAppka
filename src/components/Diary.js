@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 function Diary() {
+  const [button, setButton] = useState(false);
   const [observations, setObservations] = useState([]);
   const [editObservation, setEditObservation] = useState({
     mentally: "",
@@ -88,6 +89,7 @@ function Diary() {
         getObservations(data);
       });
     });
+    setButton(false);
   }
   return (
     <div className="container">
@@ -131,6 +133,7 @@ function Diary() {
               <td className="table-el">{item.taughtsAfter}</td>
               <button
                 onClick={() => selectObservation(item.id)}
+                onClick={() => setButton(!button)}
                 className="main-button-style"
               >
                 Edytuj
@@ -139,55 +142,57 @@ function Diary() {
           </tbody>
         ))}
       </table>
-      <div className="edit-form">
-        <div className="edit-form-columns">
-          <div className="edit-form-column">
-            <h2 className="edit-form-el">Przed</h2>
-            <input
-              className="edit-form-el"
-              id="mentally"
-              value={editObservation.mentally}
-              onChange={handleChange}
-            ></input>
-            <input
-              className="edit-form-el"
-              id="physically"
-              value={editObservation.physically}
-              onChange={handleChange}
-            ></input>
-            <input
-              className="edit-form-el"
-              id="taughts"
-              value={editObservation.taughts}
-              onChange={handleChange}
-            ></input>
+      {button && (
+        <div className="edit-form">
+          <div className="edit-form-columns">
+            <div className="edit-form-column">
+              <h2 className="edit-form-el">Przed</h2>
+              <input
+                className="edit-form-el"
+                id="mentally"
+                value={editObservation.mentally}
+                onChange={handleChange}
+              ></input>
+              <input
+                className="edit-form-el"
+                id="physically"
+                value={editObservation.physically}
+                onChange={handleChange}
+              ></input>
+              <input
+                className="edit-form-el"
+                id="taughts"
+                value={editObservation.taughts}
+                onChange={handleChange}
+              ></input>
+            </div>
+            <div className="edit-form-column">
+              <h2 className="edit-form-el">Po</h2>
+              <input
+                className="edit-form-el"
+                id="mentallyAfter"
+                value={editObservation.mentallyAfter}
+                onChange={handleChange}
+              ></input>
+              <input
+                className="edit-form-el"
+                id="physicallyAfter"
+                value={editObservation.physicallyAfter}
+                onChange={handleChange}
+              ></input>
+              <input
+                className="edit-form-el"
+                id="taughtsAfter"
+                value={editObservation.taughtsAfter}
+                onChange={handleChange}
+              ></input>
+            </div>
           </div>
-          <div className="edit-form-column">
-            <h2 className="edit-form-el">Po</h2>
-            <input
-              className="edit-form-el"
-              id="mentallyAfter"
-              value={editObservation.mentallyAfter}
-              onChange={handleChange}
-            ></input>
-            <input
-              className="edit-form-el"
-              id="physicallyAfter"
-              value={editObservation.physicallyAfter}
-              onChange={handleChange}
-            ></input>
-            <input
-              className="edit-form-el"
-              id="taughtsAfter"
-              value={editObservation.taughtsAfter}
-              onChange={handleChange}
-            ></input>
-          </div>
+          <button className="main-button-style" onClick={updateObservation}>
+            Zmień
+          </button>
         </div>
-        <button className="main-button-style" onClick={updateObservation}>
-          Zmień
-        </button>
-      </div>
+      )}
     </div>
   );
 }

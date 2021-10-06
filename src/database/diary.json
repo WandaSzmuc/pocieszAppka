@@ -3,52 +3,62 @@
     {
       "date": "26.09.2021",
       "mentally": "dobrze",
-      "physically": "lepiej",
+      "physically": "nawet nieźle",
       "taughts": "wszystko git ",
       "id": 1,
-      "mentallyAfter": "spoko",
-      "physicallyAfter": "loko",
-      "taughtsAfter": "git"
+      "mentallyAfter": "jeszcze lepiej",
+      "physicallyAfter": "jest ok",
+      "taughtsAfter": "jestem super"
     },
     {
       "date": "27.09.2021",
-      "mentally": "lepiej",
-      "physically": "lepiej",
-      "taughts": "wszystko git ",
+      "mentally": "bywało lepiej",
+      "physically": "ok",
+      "taughts": "wkurza mnie sąsiad",
       "id": 2,
       "mentallyAfter": "fajnie",
       "physicallyAfter": "relaks",
-      "taughtsAfter": "coooo humor gituwa"
+      "taughtsAfter": "pogadam z nim"
     },
     {
       "date": "2.10.2021",
-      "mentally": "lepiej",
-      "physically": "lepiej",
-      "taughts": "wszystko git ",
+      "mentally": "zmęczona",
+      "physically": "spięta",
+      "taughts": "czuję rozdrażnienie",
       "id": 3,
       "mentallyAfter": "fajnie",
       "physicallyAfter": "relaks",
-      "taughtsAfter": "coooo humor gituwa"
+      "taughtsAfter": "odpocznę sobie jeszcze"
     },
     {
       "date": "4.10.2021",
       "mentally": "średnio",
       "physically": "dobrze",
-      "taughts": "ale jaja",
+      "taughts": "wszystko mnie denerwuje",
       "id": 4,
       "mentallyAfter": "spoko",
-      "physicallyAfter": "ale mi się udało",
+      "physicallyAfter": "uspokoiłam się",
       "taughtsAfter": "dam sobie radę"
     },
     {
       "date": "6.10.2021",
       "mentally": "słabo",
       "physically": "spięta",
-      "taughts": "żabson ziomal",
+      "taughts": "brak wiary w siebie :((",
       "id": 5,
       "mentallyAfter": "spoko",
       "physicallyAfter": "relaks",
       "taughtsAfter": "dam sobie radę"
+    },
+    {
+      "date": "6.10.2021",
+      "mentally": "muszę nad sobą jeszcze popracować",
+      "physically": "powinnam zadbać o zdrowszą dietę",
+      "taughts": "nie dbam o siebie tak jak powinnam",
+      "id": 6,
+      "mentallyAfter": "dobrze",
+      "physicallyAfter": "średnio",
+      "taughtsAfter": "chyba jestem dla siebie zbyt surowa"
     }
   ]
 }
