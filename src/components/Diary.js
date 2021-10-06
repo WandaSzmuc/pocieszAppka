@@ -54,7 +54,7 @@ function Diary() {
       taughtsAfter: item.taughtsAfter,
     });
   }
-  function updateObservation() {
+  function updateObservation(id) {
     let item = {
       editObservation,
     };
@@ -67,9 +67,12 @@ function Diary() {
       },
       body: JSON.stringify(item),
     }).then((response) => {
-      response.json().then((resp) => {
-        console.warn(resp);
-        getObservations();
+      response.json().then((data) => {
+        console.warn(data);
+        const updatedObject = [...observations];
+        const idx = observations.findIndex((obj) => obj.id === id);
+        updatedObject[idx] = data;
+        getObservations(updatedObject);
       });
     });
   }
