@@ -5,7 +5,7 @@ const Menu = () => {
     <div className="menu">
       <div className="logo">pocieszAppka</div>
       <div className="menu-container">
-        <Link to="/">Twoje samopoczucie</Link>
+        <Link to="/">Twoje samopoczucie</Link> //activClass
         <Link to="/diary">Twój dziennik</Link>
       </div>
     </div>

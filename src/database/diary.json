@@ -41,24 +41,14 @@
       "taughtsAfter": "dam sobie radę"
     },
     {
-      "date": "6.10.2021",
-      "mentally": "słabo",
-      "physically": "spięta",
-      "taughts": "brak wiary w siebie :((",
-      "id": 5,
-      "mentallyAfter": "spoko",
-      "physicallyAfter": "relaks",
-      "taughtsAfter": "dam sobie radę"
-    },
-    {
-      "date": "6.10.2021",
-      "mentally": "muszę nad sobą jeszcze popracować",
-      "physically": "powinnam zadbać o zdrowszą dietę",
-      "taughts": "nie dbam o siebie tak jak powinnam",
+      "date": "7.10.2021",
+      "mentally": "dobrze",
+      "physically": "normalnie",
+      "taughts": "medytacja z rana jest najlepsza",
       "id": 6,
-      "mentallyAfter": "dobrze",
-      "physicallyAfter": "średnio",
-      "taughtsAfter": "chyba jestem dla siebie zbyt surowa"
+      "mentallyAfter": "jeszcze lepiej",
+      "physicallyAfter": "rozluźniona",
+      "taughtsAfter": "dużo pozytywnych myśli"
     }
   ]
 }

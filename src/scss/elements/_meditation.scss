@@ -1,0 +1,36 @@
+@keyframes pulse {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(2);
+    background-color: rgb(97, 192, 247);
+  }
+}
+.meditation-container {
+  margin: 50px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.loading {
+  border-radius: 50%;
+  padding: 50px;
+  animation: pulse 2s infinite alternate;
+}
+.medi-button-style {
+  margin-top: 70px;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: $landing-page-main-text-color;
+  background-color: $main-accent-color;
+  border: 1px solid $main-accent-color;
+  border-radius: 30px;
+  font-family: $main-font;
+}
+.main-button-style:hover {
+  color: $hover-effect-color;
+}

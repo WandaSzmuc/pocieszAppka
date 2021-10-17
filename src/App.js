@@ -5,7 +5,9 @@ import Header from "./components/Header";
 import Menu from "./components/Menu";
 import Diary from "./components/Diary";
 import AfterForm from "./components/AfterForm";
+import Meditation from "./components/Meditation";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
 function App() {
   return (
     <Router>
@@ -13,6 +15,7 @@ function App() {
       <Header />
       <Switch>
         <Route exact path="/" component={BeforeForm} />
+        <Route path="/meditation" component={Meditation} />
         <Route path="/after/:id" component={AfterForm} />
         <Route path="/diary">
           <Diary />

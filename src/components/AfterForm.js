@@ -18,7 +18,7 @@ function AfterForm({ history }) {
       taughtsAfter,
     };
 
-    fetch(`http://localhost:3000/diary/${id}`, {
+    fetch(`http://localhost:3000/diary/${id}`, { //async/await
       method: "PATCH",
       body: JSON.stringify(obj),
       headers: {
@@ -34,6 +34,7 @@ function AfterForm({ history }) {
       })
       .catch((error) => {
         console.log(error);
+        //throw new Error('')
       });
   };
 
@@ -46,6 +47,7 @@ function AfterForm({ history }) {
       };
     });
   };
+
   return (
     <div className="parent-container">
       <div className="container form-after-medi">
@@ -58,7 +60,7 @@ function AfterForm({ history }) {
               id="mentallyAfter"
               value={input.mentallyAfter}
               onChange={handleChange}
-            ></input>
+            />
           </div>
           <div>
             <label>Fizycznie </label>

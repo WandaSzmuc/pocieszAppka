@@ -20,9 +20,7 @@ function Diary() {
       };
     });
   };
-  useEffect(() => {
-    getObservations();
-  }, []);
+  useEffect(getObservations, []);
 
   function getObservations() {
     fetch("http://localhost:3000/diary")
@@ -43,9 +41,10 @@ function Diary() {
       });
     });
   }
-  function selectObservation(id) {
-    console.warn("function called", observations[id - 1]);
-    let item = observations[id - 1];
+  function selectObservation(item) {
+    console.warn("function called", observations[0]);
+    setButton(true);
+    // let item = observations[id - 1];
     setEditObservation({
       id: item.id,
       mentally: item.mentally,
@@ -67,6 +66,9 @@ function Diary() {
       taughts,
       taughtsAfter,
     } = editObservation;
+    const x = {
+      ...editObservation
+    }
     const item = {
       mentally,
       mentallyAfter,
@@ -132,8 +134,7 @@ function Diary() {
               <td className="table-el before">{item.taughts}</td>{" "}
               <td className="table-el">{item.taughtsAfter}</td>
               <button
-                onClick={() => selectObservation(item.id)}
-                onClick={() => setButton(!button)}
+                onClick={() => selectObservation(item)}
                 className="main-button-style"
               >
                 Edytuj

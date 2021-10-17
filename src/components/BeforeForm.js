@@ -20,6 +20,7 @@ const BeforeForm = ({ history }) => {
     };
 
     fetch(`http://localhost:3000/diary`, {
+      //.env
       method: "POST",
       body: JSON.stringify(obj),
       headers: {
@@ -30,7 +31,7 @@ const BeforeForm = ({ history }) => {
       .then((data) => {
         console.log(data);
         setData(data);
-        history.push(`after/${data.id}`);
+        history.push(`meditation`);
       })
       .catch((error) => {
         console.log(error);
